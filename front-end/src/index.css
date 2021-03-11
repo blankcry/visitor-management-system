@@ -1,0 +1,194 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.registercard {
+  box-shadow: none;
+  border-style: solid;
+  border-radius: 7px;
+  border-color: rgb(226, 223, 223);
+  /* background-color: rgb(226, 223, 223) */
+}
+.card-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 30px auto;
+  padding: 30px;
+  width: 1000px;
+  height: 600px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.10), -5px -5px 50px 10px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.card .card_form {
+  width: inherit;
+  height: inherit;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.card .card_form form fieldset input[type=text] {
+  /* box-sizing:border-box; */
+  width: 70%;
+  height: auto;
+  border-radius: 40px;
+}
+/* .card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+} */
+
+/* .col{
+  margin-right: 50px; 
+  padding: 5px;
+}  */
+ input {
+  width: 70%
+}
+/* .col {
+  border: solid
+} */
+/* .col-md-auto {
+  border: solid
+} */
+.modalPopUp {
+  font-size: 12px;
+  
+}
+.modalPopUp > .header {
+width: 100%;
+border-bottom: 1px solid gray;
+font-size: 18px;
+text-align: center;
+padding: 5px;
+}
+.modalPopUp > .content {
+width: 100%;
+padding: 10px 5px;
+}
+.modalPopUp > .actions {
+width: 100%;
+padding: 10px 5px;
+margin: auto;
+text-align: center;
+}
+.modalPopUp > .close {
+cursor: pointer;
+position: absolute;
+display: block;
+padding: 2px 5px;
+line-height: 20px;
+right: -10px;
+top: -10px;
+font-size: 24px;
+background: #ffffff;
+border-radius: 18px;
+border: 1px solid #cfcece;
+}
+.btn .btn-outline-secondary {
+  width: 20px;
+  height: 10px
+}
+#search-button{
+ margin-bottom: 20px;
+ position: relative;
+ bottom: 54px;
+ left: 1150px
+}
+
+#right-side {
+  position: relative;
+  right:5%;
+  top:30%
+}
+#create-entry {
+  position: relative;
+  top:90px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+a{
+  cursor: pointer;
+}
+#table-car-log {
+  width: auto;
+  height: auto;
+  border-style: solid;
+  border-width: medium;
+  box-shadow: none;
+  cursor: copy;
+  /* position: relative;
+  left: 80px;
+  bottom: 70px */
+}
+
+#table-closed-car-log {
+  width: auto;
+  height: auto;
+  border-style: solid;
+  border-width: medium;
+  box-shadow: none;
+  cursor: copy;   
+}
+#registred-cars-view {
+  width: auto;
+  border-style: solid;
+  border-radius: 20%
+}
+.text-center {
+  font-family: 'ubuntu'
+}
+tr td {
+  cursor: pointer;
+  font-size: 13px
+}
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+i {
+  margin-right: 5px
+}
+/* @media all and (max-width: 400px) {
+  .card-list {
+    flex-direction: column;
+  }
+} */
