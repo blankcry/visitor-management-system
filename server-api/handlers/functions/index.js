@@ -1,4 +1,7 @@
 const db = require('../../models/index');
+
+//Functions that exist here are functions that have been called through different handler Modules
+//    i.e SearchDatase Function is an asynchronus func used to search a database for a specific redult and finds the first one the returns the data, its being used in the handlers.carModule, and more.
 module.exports = {
   searchDatabase: async (databaseName, searchField, searchFieldData) => {
     return await db(databaseName).where(searchField, searchFieldData).first()

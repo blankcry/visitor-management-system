@@ -16,6 +16,8 @@ genrateToken = (data) => {
 
 exports.login = async (request, response, next) => {
   const { username, password } = request.body;
+  // SearchDatabase function searches a database by a paramenter (searchField), it takes 3 parameters, Table Name, The field to search and the information to search
+  // It then returns a user object if its found
   functions.searchDatabase(process.env.ACCOUNTDB, 'username', username).then((user) => {
     if (!user) {
       next(new Error('Invalid Username'))
@@ -23,10 +25,7 @@ exports.login = async (request, response, next) => {
       bcrypt.compare(password, user.password, (err, result) => {
         if (result) {
           const token = genrateToken(user)
-          response.json({
-            user,
-            token
-          })
+          response.status(200).json({user,token})
         } else {
           next({ message: 'Invalid Password', status: 401, err });
         };
@@ -37,7 +36,10 @@ exports.login = async (request, response, next) => {
   });
 };
 
+// Asynchrous function that inputs default data into the database, the user created from this is a default user that can be deleted when you create a new admin user.
 exports.register = async (request, response, next) => {
+  // SearchDatabase function searches a database by a paramenter (searchField), it takes 3 parameters, Table Name, The field to search and the information to search
+  // It then returns a user object if its found
   functions.searchDatabase(process.env.ACCOUNTDB, "username", "admin.admin").then(user => {
     if (user) {
       next(new Error("username already exists"))

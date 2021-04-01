@@ -4,6 +4,7 @@ const officeUserCode = process.env.OFFICEUSER_CODE;
 
 exports.createNewAppointment = async (request, responose, next) => {
   try {
+    // ValidDetails function validates post request made from user to confirm if they meet the USER REQUIREMENTS
     functions.validUser(request.user.account_role, officeUserCode);
     const account_id = request.user.id;
     const { first_name, last_name, phone_number, appointment_date, appointment_time } = request.body;
