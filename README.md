@@ -14,4 +14,4 @@ Back-End API
   - Check Package.json files for dependcies, authentication is based on JWT Tokens
   - To create the default admin user in the database run a get request to serveraddress:{port}/register
   
-  PS. The Code isn't well documented
+  PS. ONLY SERVER API is documented 
